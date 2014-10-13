@@ -17,7 +17,7 @@ int filter (const char * word) {
 
 			fgets (line, sizeof line, file);
 
-			if (strncmp(word, line, 3) == 0) {
+			if (strncmp (word, line, strlen (line) - 2) == 0) {
 
 				printf ("MATCH FOUND: %s\n", word);
 				return TRUE; //bad word detected!
