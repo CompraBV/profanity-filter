@@ -2,9 +2,6 @@
 
 int filter (const char * word) {
 
-	static const char * BADWORDS = "badwords.txt";
-
-	char * line = NULL;
 	ssize_t read;
 
 	FILE *file = fopen (BADWORDS, "r");
