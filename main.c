@@ -9,14 +9,12 @@ int main (int argc, char *argv[]) {
 
 	}
 
-	if (filter (argv[1]) == 1) {
-		
-		puts ("BADWORD");		
+	if (filter (argv[1], argv[0]) == 1) {
+
 		return 1;
 
 	}
 
-	puts ("NO BADWORD");
 	return 0;
 
 }

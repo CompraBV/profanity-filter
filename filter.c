@@ -1,6 +1,6 @@
 #include "program.h"
 
-int filter (const char * word) {
+int filter (const char * word, const char * loc) {
 
 	ssize_t read;
 
