@@ -4,7 +4,7 @@
 #define TRUE 1
 #define FALSE 0
 
-#define BADWORDS "assets/tools/profanity-filter/badwords.txt"
+#define BADWORDS "badwords.txt"
 
 #include <stdio.h>
 #include <stdlib.h>

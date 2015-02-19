@@ -1,4 +1,5 @@
 #include "program.h"
+#include <stdio.h>
 
 int main (int argc, char *argv[]) {
 
@@ -11,10 +12,12 @@ int main (int argc, char *argv[]) {
 
 	if (filter (argv[1], argv[0]) == 1) {
 
-		return 1;
+		printf ("Yes");
+//		return 1;
 
 	}
 
+	printf ("No");
 	return 0;
 
 }
