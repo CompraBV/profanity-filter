@@ -9,9 +9,8 @@
  *
  * supply a word as argument
 
- * Returns 0 if the word is not on the badwords list
- * Returns 1 if the word is on the badwords list
- * Returns 2 on missing argument
+ * Returns false if the word is not on the badwords list
+ * Returns true if the word is on the badwords list
  */
 class ProfanityFilter implements IProfanityFilter {
 
@@ -19,7 +18,9 @@ class ProfanityFilter implements IProfanityFilter {
     {
 
         exec ("assets/tools/profanity-filter/profanity-filter " . $word, $out, $return);
-        $return != 0 ? false : true;
+        return $return != 0 
+        	? false 
+        	: true;
 
     }
 
