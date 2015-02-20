@@ -10,7 +10,8 @@
 
 class ProfanityFilter {
 public:
-	ProfanityFilter();
+	ProfanityFilter (std::string word);
+	int isProfanity (std::string word);
 };
 
 #endif /* PROFANITYFILTER_H_ */

@@ -3,6 +3,8 @@
 int main (int argc, char * argv[])
 {
 
-	ProfanityFilter *pf = new ProfanityFilter ();
+	std::string word = "kaas";
+
+	new ProfanityFilter (word);
 
 }
