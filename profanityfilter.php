@@ -18,9 +18,9 @@ class ProfanityFilter implements IProfanityFilter {
     {
 
         exec ("assets/tools/profanity-filter/profanity-filter " . $word, $out, $return);
-        return $return != 0 
-        	? false 
-        	: true;
+        return $return == 1 
+        	? true 
+        	: false;
 
     }
 
