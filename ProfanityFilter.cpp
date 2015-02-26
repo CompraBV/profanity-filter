@@ -8,7 +8,7 @@
 #include "program.h"
 #include "ProfanityFilter.h"
 
-ProfanityFilter::ProfanityFilter(std::string word)
+ProfanityFilter::ProfanityFilter (std::string word)
 {
 
 	if (this->isProfanity (word))
@@ -29,14 +29,20 @@ int ProfanityFilter::isProfanity (std::string word)
 	{
 
 		std::string line;
-		while (getline (file, line))
+
+		while (std::getline (file, line))
 		{
 
+			// Make sure it's a basic string like we know it
+			std::string rLine = line.c_str ();
 
+			// Remove the "/r" at the end of the string since we're dealing with a file
+			rLine.erase (rLine.size () - 1);
 
-			if (word.compare (line) == 0)
+			if ( ! word.compare (rLine))
 			{
 
+				std::cout << "Gotcha!" << std::endl;
 				return TRUE;
 
 			} else std::cout << word << " doesn't match " << line << std::endl;
