@@ -8,17 +8,6 @@
 #include "program.h"
 #include "ProfanityFilter.h"
 
-ProfanityFilter::ProfanityFilter (std::string word)
-{
-
-	if (this->isProfanity (word))
-		std::cout << "Profanity!" << std::endl;
-	else
-		std::cout << "We're good!" << std::endl;
-
-
-}
-
 int ProfanityFilter::isProfanity (std::string word)
 {
 
