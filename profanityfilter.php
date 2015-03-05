@@ -14,14 +14,19 @@
  */
 class ProfanityFilter implements IProfanityFilter {
 
+    static $rawOutput;
+
     static function isProfanity ($word)
     {
 
-        exec ("assets/tools/profanity-filter/profanity-filter " . $word, $out, $return);
-        return $return == 1 
-        	? true 
-        	: false;
-
+    	$lines = file ('assets/tools/profanity-filter/badwords.txt');
+    	
+    	foreach ($lines as $line)
+    		if (trim(preg_replace('/\s\s+/', ' ', $line)) == $word)
+    			return true;
+    		
+		return false;
+		
     }
 
 }
